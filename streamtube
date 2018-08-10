@@ -1,0 +1,6 @@
+#!/bin/bash
+url=""$@""
+#mplayer 1
+#youtube-dl -q -o- $url | mplayer --force-seekable=yes -fs -aspect 16:9 -cache 8192  -
+#mplayer 2
+youtube-dl --yes-playlist  -q -o- $url | mpv --cache-secs=20 --force-seekable=yes -fs -video-aspect 16:9   -
